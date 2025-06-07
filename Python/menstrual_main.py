@@ -1,15 +1,13 @@
 import menstrual_app
 from menstrual_app import *
 
-
-
 print('''
-	=====================================================
-	<<<>>>ADARA Menstrual Cycle Calculator<<<>>>
-	=====================================================
-							''')
+	====================
+	Menstrual Calculator
+	====================
+		my pride!!	
+				''')
 
-print()
 
 last_period = int(input('Enter first day of your last period from(1-31): '))
 print()
@@ -21,11 +19,10 @@ period_days = int(input('How long does your periods last on an average: '))
 print()
 
 cycle_length = int(input('What is your average cycle length(days): '))
-print()
 
 
 	
-ovulation_day = cycle_length - 14
+ovulation_day = cycle_length // 2
 
 fertile_window = ovulation_day - 5
 
@@ -45,14 +42,20 @@ newday_3, new_month3 = check_days(last_period, period_month, fertile_window_end)
 
 newday_4, new_month4 = check_days(last_period, period_month, next_period)
 
-newday_5, new_month5 = check_days(last_period, range_of_next_period)
+newday_5, new_month5 = check_days(last_period, period_month, range_of_next_period)
 
 
-print(f'Your estimated ovulation date is: {date(*newday_1, new_month1)}')
+
+print('Calculating.......')
+
+
+print(f'Your estimated ovulation date is: {date(newday_1, new_month1)}')
 print()
 
-print(f'Fertile Window: {date(*newday_2, new_month2)} - fertile Window ends: {date(*newday_3, new_month3)}')
+print(f'Fertile Window starts: {date(newday_2, new_month2)} and ends: {date(newday_3, new_month3)}')
 print()
 
-print(f'Your estimated next period are: {date(*newday_4, new_month4)} - {newday_5, new_month5}')
+print(f'Your next period is estimated to be between: {date(newday_4, new_month4)} and {date(newday_5, new_month5)}')
+print()
+
 

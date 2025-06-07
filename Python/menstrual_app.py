@@ -22,15 +22,15 @@ def check_month(month):
 			days = 30
 		else:
 			days = 31	
-	
+
 	return days
 	
 
-def check_days(last_period, period_month,  days_to_add):
+def check_days(last_period, period_month, days_to_add):
 
 	while days_to_add > 0:
 
-		days_in_a_month = check_month(days_to_add)
+		days_in_a_month = check_month(period_month)
 
 		if (last_period + days_to_add) <= days_in_a_month:
 
@@ -41,9 +41,12 @@ def check_days(last_period, period_month,  days_to_add):
 			break
 
 		else:
-			new_day = days_to_add (days_in_a_month - last_period + 1)
+			days_to_add -= (days_in_a_month - last_period + 1)
 			
+			last_period = 1			
+
 			period_month += 1
+
 
 			if period_month > 12:
 
@@ -51,13 +54,15 @@ def check_days(last_period, period_month,  days_to_add):
 
 
 
-	return period_day, period_month
+	return last_period, period_month
 
 
 		
 def date(day, month):
 
-	return f'{day:02d}-{month:02d}'	
+	if isinstance(day, int) and isinstance(month, int):
+
+		return f'{day:02d} - {month:02d}'	
 	
 
 
