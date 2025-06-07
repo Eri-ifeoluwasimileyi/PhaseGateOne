@@ -60,12 +60,7 @@ public class MenstrualApp {
 
 	public static String dateformat(int day, int month) {
 
-		String newDay = twoNumbers(day)
-
-		String newMonth = twoNumbers(month)
-
-    	
-		return newDay(day) + " - " + newMonth(month);
+		return twoNumbers(day) + " - " + twoNumbers(month);
 
 	}
 
