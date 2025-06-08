@@ -62,25 +62,22 @@ class TestCheckout(unittest.TestCase):
 	def test_print_invoice_is_valid(self):
 		customer_name = "ada"
 		
-
 		cart = [
 			{'name': 'egg', 'quantity': 3, 'price': 100, 'total': 300}
 		]
-
-		
 		cashier_name = "ola"
 		discount = 10
 		cashier = (cashier_name, discount)
 
 		actual = checkout.print_invoice(cart, customer_name, cashier, discount)
 		expected = 290.25
-
 		self.assertEqual(actual, expected)
 
 
 
 	def test_print_receipt(self):
 		customer_name = "ada"
+
 		cart = [
 			{'name': 'egg', 'quantity': 3, 'price': 100, 'total': 300}
 		]
@@ -92,5 +89,4 @@ class TestCheckout(unittest.TestCase):
 		
 		actual = checkout.print_receipt(cart, customer_name, cashier, discount, payment)
 		expected = 300 - 290.25
-
 		self.assertEqual(actual, expected)
