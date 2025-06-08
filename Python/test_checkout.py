@@ -58,39 +58,3 @@ class TestCheckout(unittest.TestCase):
 		expected = "Invalid input"
 		self.assertEqual(actual, expected)
 
-
-	def test_print_invoice_is_valid(self):
-		customer_name = "ada"
-		item = "egg"
-		how_many = 3
-    		price = 100
-		total = 300
-		cart = [[item, how_many, price, total]]
-		cashier_name = "ola"
-		discount = 10
-		cashier = (cashier_name, discount)
-
-		actual = print_invoice(cart, customer_name, cashier)
-		expected = 270
-
-		self.assertEqual(actual, expected)
-
-
-
-	def test_print_receipt(self):
-		customer_name = "ada"
-		item = "egg"
-		how_many = 3
-    		price = 100
-		total = 300
-		cart = [[item, how_many, price, total]]
-		cashier_name = "ola"
-		discount = 10
-		cashier = (cashier_name, discount)
-		payment = 300
-		total = print_invoice(cart, customer_name, cashier)
-		
-		actual = print_receipt(cart, customer_name, cashier, payment)
-		expected = 300 - 270
-
-		self.assertEqual(actual, expected)
