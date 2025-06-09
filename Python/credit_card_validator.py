@@ -65,7 +65,7 @@ def check_validity(card_number):
 
 
 
-"""
+
 user_input = str(input("Hello, Kindly Enter Card details to verify: ")
 print()
 
@@ -80,5 +80,4 @@ print("***Credit Card Digit Length: " ,  len(user_input))
 print("***Credit Card Validity Status: " + check_validity(user_input))
 
 print("****************************************")
-"""
 		
