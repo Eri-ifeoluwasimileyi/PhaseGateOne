@@ -35,7 +35,9 @@ public class CreditCardValidator {
 
 	public static String checkValidity(String cardNumber){
 
-		int sumOdd = 0, sumEven = 0, totalSum = 0;
+		int sumOdd = 0
+		int sumEven = 0
+		int totalSum = 0;
 	
 		int size = cardNumber.length();
 
