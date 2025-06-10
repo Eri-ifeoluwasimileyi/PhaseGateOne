@@ -12,8 +12,11 @@ def check_name_validity(name):
 
 		return "this space cannot be empty"
 
-
 	elif new_name.isalpha():
+
+		return name
+		
+	elif name.split('-'):
 
 		return name
 	
