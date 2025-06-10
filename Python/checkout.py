@@ -16,6 +16,10 @@ def check_name_validity(name):
 	elif new_name.isalpha():
 
 		return name
+
+	elif name.split('-'):
+
+		return name
 	
 	else: return "Invalid name"
 
