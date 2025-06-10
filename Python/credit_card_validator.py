@@ -66,7 +66,7 @@ def check_validity(card_number):
 
 
 
-user_input = str(input("Hello, Kindly Enter Card details to verify: ")
+user_input = str(input("Hello, Kindly Enter Card details to verify: ") # input data are always in str why do u need to cast it str
 print()
 
 print("****************************************")
