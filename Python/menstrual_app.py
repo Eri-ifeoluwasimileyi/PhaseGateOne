@@ -1,5 +1,9 @@
 def check_month(month):
 
+	if month < 1 or month > 12:
+		
+		return "Invalid month"
+
 	if month == 2:
 		
 		days = 28
@@ -28,9 +32,17 @@ def check_month(month):
 
 def check_days(last_period, period_month, days_to_add):
 
+	if period_month < 1 or period_month > 12:
+
+		return "Invalid month"
+
 	while days_to_add > 0:
 
 		days_in_a_month = check_month(period_month)
+
+		if days_in_a_month == 0 or days_in_a_month > 31:
+
+			return "invalid day"
 
 		if (last_period + days_to_add) <= days_in_a_month:
 
