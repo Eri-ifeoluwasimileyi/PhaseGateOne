@@ -10,7 +10,7 @@ public class StudentGradesLagbaja {
 	Scanner input = new Scanner(System.in);
 
 		int [][] grades = new int [numOfStudents][numOfSubjects];
-		//this 2D array is to hold the student scores, the rows for each students,and the columns for each subject
+		//this 2D array is to hold the student scores, the rows for each student,and the columns for each subject
 		
 		for(int student = 0; student < numOfStudents; student++) {
 
